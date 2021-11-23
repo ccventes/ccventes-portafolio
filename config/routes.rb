@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :portafolios
   #get 'home/index'
   resources :widgets
 
