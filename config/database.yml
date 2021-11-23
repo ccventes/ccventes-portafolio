@@ -20,11 +20,11 @@ default: &default
   #username: postgres
   #password: ccventes
   #host: localhost
-  adapter: postgresql
+  adapter: <%= Rails.application.credentials.adapter %>
   encoding: unicode
-  username: zaoqimxlfllofh
-  password: abe48f55a74648dd610971382e4e9d7e64a7e1965876a876cc8b9b27d13b21fd
-  host: ec2-54-221-74-111.compute-1.amazonaws.com
+  username: <%= Rails.application.credentials.username %>
+  password: <%= Rails.application.credentials.password %>
+  host: <%= Rails.application.credentials.host %>
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
@@ -90,6 +90,7 @@ test:
 #
 production:
   <<: *default
-  database: ruby-getting-started_production
-  username: ruby-getting-started
-  password: <%= ENV['RUBY-GETTING-STARTED_DATABASE_PASSWORD'] %>
+  #database: ruby-getting-started_production
+  #username: ruby-getting-started
+  #password: <%= ENV['RUBY-GETTING-STARTED_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
