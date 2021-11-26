@@ -1,4 +1,4 @@
-<h1><b>Have this in mind when you clone this project</b></h1>
+# Have this in mind when you clone this project
 
 Access to this project  database uses an encrypted pasword, If this is your first time uing rails with postgresql, first configure postgress database then go database.yml file change your host to "localhost" and the passwod set by you.
 
