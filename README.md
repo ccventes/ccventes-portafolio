@@ -1,3 +1,10 @@
+<h1><b>Have this in mind when you clone this project</b></h1>
+
+Access to this project  database uses an encrypted pasword, If this is your first time uing rails with postgresql, first configure postgress database then go database.yml file change your host to "localhost" and the passwod set by you.
+
+VERY IMPORTANT: before uploading to any public repository make sure the access is encrypted, rails alllows you to edit your credentials and create a master key with command
+EDITOR=vim rails credentials:edit (DO NOT PUSH THE MASTER KEY FILE TO THE REPOSITORY) Heroku ha tutorials of how include your master key on your porject, so add this file to the .gitignore list.
+
 # ruby-getting-started
 
 A barebones Rails app, which can easily be deployed to Heroku.
