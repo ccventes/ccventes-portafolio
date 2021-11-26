@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :userms
+  devise_for :models #esta no la voy a usar
   resources :portafolios
   #get 'home/index'
   resources :widgets
